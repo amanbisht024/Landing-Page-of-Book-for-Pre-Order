@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Hardcover Pre-Order</title>
+    <link rel="stylesheet" href="Book Pre-order.css">
+</head>
+
+<body>
+    <div class="fixed-button">
+        <button type="button" class="pre-order-button">Pre-Order Now</button>
+    </div>
+
+    <div class="book-section">
+        <img src="Atomic_Habits.png" alt="Book Cover Image">
+        <div class="book-description">
+            <p>
+                <b>Discover the enchancing world within the pages of our exclusive limited edition hardcover. Immerse
+                yourself in a captivating story filled with intrigue, magic, and adventure.</b>
+            </p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="table-of-content">
+            <b>CONTENTS</b>
+            <ul>
+                <li>The Fundamentals</li>
+                <li>Chapter 1: The 1st Law - Make it Obvious</li>
+                <li>Chapter 2: The 2nd Law - Make it Attractive</li>
+                <li>Chapter 3: The 3rd Law - Make it Easy</li>
+                <li>Chapter 4: The 4th Law - Make it Satisfying</li>
+                <li>Bonus: Advanced Tactics - Good to Being Truly Great</li>
+            </ul>
+        </div>
+    
+        <div class="preorder-button-left">
+            <button type="button" class="pre-order-button">Pre-Order Now</button>
+        </div>
+    </div>
+
+    <div class="two-column-section">
+        <div class="book-image">
+            <img src="Open Image.jpeg" alt="Book Cover Image">
+        </div>
+        <div class="content-of-books">
+            <b><p>Tiny Changes, <br> Remarkable Results</p>
+            <p>An Easy & Proven Way to Build Good Habits & Break Bad Ones</p></b>
+        </div>
+    </div>
+
+    <div class="countdown">
+        <p>Pre-order offer ends in:</p>
+        <div id="countdown-timer">5 days 12:30:00</div>
+    </div>
+
+    <h2 id="Readers">What Readers Are Saying</h2>
+    <div class="testimonials-section">
+        <div class="testimonial">
+            <blockquote>
+                "Absolutely mesmerizing! The exclusive hardcover is a must-have for any book lover."
+            </blockquote>
+            <p class="reader-name">- Sabnam Joshi</p>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "Exited for the book as I need Improvement"
+            </blockquote>
+            <p class="reader-name">- Kartik Verma</p>
+        </div>
+        
+    </div>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li><strong>Q:</strong> When will the hardcover be shipped?</li>
+            <li><strong>A:</strong> Shipping will begin on 18 Jan 2024.</li>
+            <br>
+            <li><strong>Q:</strong> When will be it available on amazon?</li>
+            <li><strong>A:</strong> 6 Days after launching.</li>           
+            
+        </ul>
+    </div>
+
+    <footer>
+        <p>Subscribe to our newsletter for updates and exclusive offers</p>
+        <input type="email" placeholder="Your Email">
+        <button type="submit">Subscribe</button>
+    </footer>
+
+    <script>
+        var releaseDate = new Date('January 16, 2024 00:00:00').getTime();
+        var countdown = setInterval(function () {
+            var now = new Date().getTime();
+            var timeRemaining = releaseDate - now;
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            document.getElementById('countdown-timer').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown-timer').innerHTML = 'Pre-order offer has ended!';
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
